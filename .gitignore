@@ -1,0 +1,8 @@
+## Cucumber
+#/src/test/resources/cucumber-external-override.properties
+#/src/test/resources/cucumber-local-override.properties
+
+## Directory-base project format
+/.idea/
+/build/
+/target/
