@@ -1,5 +1,6 @@
 package step_definitions;
 
+
 import cucumber.api.java.nl.Als;
 import cucumber.api.java.nl.Dan;
 import cucumber.api.java.nl.Gegeven;
@@ -14,19 +15,17 @@ public class MyStepdefs {
     private StartPage startPage = new StartPage();
 
     @Gegeven("^open browser$")
-    public void openBrowser(){
+    public void openBrowser() {
         startPage.openBrowser();
     }
 
     @Als("^de gebruiker google opent en zoekt op \"([^\"]*)\"$")
-    public void deGebruikerGoogleOpentEnZoektOp(String zoekWoord){
-        startPage.zoeken(zoekWoord);
+    public void deGebruikerGoogleOpentEnZoektOp(String opdracht) {
+        startPage.zoeken(opdracht);
     }
 
-    @Dan("^is de eerst hit \"([^\"]*)\"$")
+    @Dan("^is de eerste hit \"([^\"]*)\"$")
     public void isDeEerstHit(String hit) {
         assertThat(startPage.getEersteHit(), is(hit));
-
     }
-
 }
